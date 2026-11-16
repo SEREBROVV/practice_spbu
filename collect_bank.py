@@ -12,7 +12,7 @@ def overpass(body):
     for url in ENDPOINTS:
         try:
             r = requests.post(url, data={"data": q}, timeout=320,
-                              headers={"User-Agent": "rostov-research/1.0"})
+                              headers={"User-Agent": "XXX"})
             r.raise_for_status()
             return r.json()["elements"]
         except Exception as e:
